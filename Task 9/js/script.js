@@ -27,11 +27,11 @@ console.log(result);
 // return: hELLO wORLD
 function swapCase(string)
 {
-    var ln = string.length;
+    var strlen = string.length;
     let newString2 = "";
  
     // Conversion according to ASCII values
-    for (var i = 0; i < ln; i++)
+    for (var i = 0; i < strlen; i++)
     {
         if (string[i] >= 'A' && string[i] <= 'Z')
            
