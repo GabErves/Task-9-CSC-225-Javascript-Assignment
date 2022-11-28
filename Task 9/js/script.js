@@ -27,17 +27,19 @@ console.log(result);
 // return: hELLO wORLD
 function swapCase(string)
 {
-    var strlen = string.length;
+    let strlen = string.length;
     let newString2 = "";
  
     // Conversion according to ASCII values
-    for (var i = 0; i < strlen; i++)
+    for (let i = 0; i < strlen; i++)
     {
         if (string[i] >= 'A' && string[i] <= 'Z')
-           //converts to unicode value in order to switch invert the case
+            //fromcharcode converts to unicode value in order to switch invert the case
+           //charcodeat converts back to the letter value from unicode
             console.log(String.fromCharCode(string.charCodeAt(i) + 32));
         else if (string[i] >= 'a' && string[i] <= 'z')
-            //converts to unicode value in order to switch invert the case
+            //fromcharcode converts to unicode value in order to switch invert the case
+            //charcodeat converts back to the letter value from unicode
             console.log(String.fromCharCode(string.charCodeAt(i) -  32));
     }
     return newString2;
@@ -103,13 +105,19 @@ function passOrFail(){
 function germanNumbers(){
     const cardinalNumbers = [2,3,4,5,6];
     const germanNumbers = ['zwei', 'drei', 'vier', 'fünf', 'sechs'];
+    const combinedArray = [];
+    for(let i=0; i<5; i++){
+        combinedArray[i] = cardinalNumbers[i] + " is " + germanNumbers[i];
+        }
+        console.log(combinedArray);
 
-   cardinalNumbers.forEach((card, index) => { 
-    const num2 = germanNumbers[index];
-    console.log(card, 'is' ,num2);
 
-   });
 
+//    cardinalNumbers.forEach((card, i) => { 
+//     const num2 = germanNumbers[i];
+//     console.log(card, 'is' ,num2);
+
+//    });
 
 
 }
