@@ -36,6 +36,7 @@ function swapCase(string)
         if (string[i] >= 'A' && string[i] <= 'Z')
             //fromcharcode converts to unicode value in order to switch invert the case
            //charcodeat converts back to the letter value from unicode
+            //i edited a formula that I found on stackoverflow and geeksforgeeks to use the acsii table instead of toUpper and toLower
             console.log(String.fromCharCode(string.charCodeAt(i) + 32));
         else if (string[i] >= 'a' && string[i] <= 'z')
             //fromcharcode converts to unicode value in order to switch invert the case
