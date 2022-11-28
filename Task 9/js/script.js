@@ -33,16 +33,12 @@ function swapCase(string)
     // Conversion according to ASCII values
     for (var i = 0; i < ln; i++)
     {
-        if (string[i] >= 'a' && string[i] <= 'z')
+        if (string[i] >= 'A' && string[i] <= 'Z')
            
-            console.log(
-            String.fromCharCode(string.charCodeAt(i) - 32)
-            );
-        else if (string[i] >= 'A' && string[i] <= 'Z')
+            console.log(String.fromCharCode(string.charCodeAt(i) + 32));
+        else if (string[i] >= 'a' && string[i] <= 'z')
             
-            console.log(
-            String.fromCharCode(string.charCodeAt(i) + 32)
-            );
+            console.log(String.fromCharCode(string.charCodeAt(i) -  32));
     }
     return newString2;
 }
@@ -171,7 +167,7 @@ returnPrimeNumbers();
 
 //Write a function that loops through and console.log's the numbers from 1 to 100, except multiples of three, log (without quotes) "CSC225 RULES" instead of the number, for the multiples of five, log (without quotes) "I LOVE JAVASCRIPT". For numbers which are multiples of both three and five, log (without quotes) "CSC225 RULES I LOVE JAVASCRIPT" Console log out:
  function iHeartJavaScript(){
-    for (let i =0; i<=100; i++){
+    for (let i =1; i<=100; i++){
         if(i%3==0){
             console.log('CSC 225 RULES');
         }
