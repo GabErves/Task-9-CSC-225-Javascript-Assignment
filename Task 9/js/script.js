@@ -34,10 +34,10 @@ function swapCase(string)
     for (var i = 0; i < strlen; i++)
     {
         if (string[i] >= 'A' && string[i] <= 'Z')
-           
+           //converts to unicode value in order to switch invert the case
             console.log(String.fromCharCode(string.charCodeAt(i) + 32));
         else if (string[i] >= 'a' && string[i] <= 'z')
-            
+            //converts to unicode value in order to switch invert the case
             console.log(String.fromCharCode(string.charCodeAt(i) -  32));
     }
     return newString2;
